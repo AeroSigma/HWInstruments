@@ -1,11 +1,11 @@
 
 /*****************************************************************************
- * midi.h
- * Lab 6: Final Project
- * ECE 476: Digital Systems Design Using Microcontrollers
- * Cornell University
- * April 2007
- * Andrew Godbehere (abg34) and Nathan Ward (njw23)
+   midi.h
+   Lab 6: Final Project
+   ECE 476: Digital Systems Design Using Microcontrollers
+   Cornell University
+   April 2007
+   Andrew Godbehere (abg34) and Nathan Ward (njw23)
  ****************************************************************************/
 
 
@@ -38,135 +38,134 @@
 //20-31 undefined
 //
 
-#define Cn1  0
-#define Csn1 1
-#define Dn1  2
-#define Dsn1 3
-#define En1  4
-#define Fn1  5
-#define Fsn1 6
-#define Gn1  7
-#define Gsn1 8
-#define An1  9
-#define Asn1 10
-#define Bn1  11
-#define C0   12
-#define Cs0  13
-#define D0   14
-#define Ds0  15
-#define E0   16
-#define F0   17
-#define Fs0  18
-#define G0   19
-#define Gs0  20
-#define A0   21
-#define As0  22
-#define B0   23
-#define C1   24
-#define Cs1  25
-#define D1   26
-#define Ds1  27
-#define E1   28
-#define F1   29
-#define Fs1  30
-#define G1   31
-#define Gs1  32
-#define A1   33
-#define As1  34
-#define B1   35
-#define C2   36
-#define Cs2  37
-#define D2   38
-#define Ds2  39
-#define E2   40
-#define F2   41
-#define Fs2  42
-#define G2   43
-#define Gs2  44
-#define A2   45
-#define As2  46
-#define B2   47
-#define C3   48
-#define Cs3  49
-#define D3   50
-#define Ds3  51
-#define E3   52
-#define F3   53
-#define Fs3  54
-#define G3   55
-#define Gs3  56
-#define A3   57
-#define As3  58
-#define B3   59
-#define C4   60  //Middle C
-#define Cs4  61
-#define D4   62
-#define Ds4  63
-#define E4   64
-#define F4   65
-#define Fs4  66
-#define G4   67
-#define Gs4  68
-#define A4   69
-#define As4  70
-#define B4   71
-#define C5   72
-#define Cs5  73
-#define D5   74
-#define Ds5  75
-#define E5   76
-#define F5   77
-#define Fs5  78
-#define G5   79
-#define Gs5  80
-#define A5   81
-#define As5  82
-#define B5   83
-#define C6   84
-#define Cs6  85
-#define D6   86
-#define Ds6  87
-#define E6   88
-#define F6   89
-#define Fs6  90
-#define G6   91
-#define Gs6  92
-#define A6   93
-#define As6  94
-#define B6   95
-#define C7   96
-#define Cs7  97
-#define D7   98
-#define Ds7  99
-#define E7  100
-#define F7  101
-#define Fs7 102
-#define G7  103
-#define Gs7 104
-#define A7  105
-#define As7 106
-#define B7  107
-#define C8  108
-#define Cs8 109
-#define D8  110
-#define Ds8 111
-#define E8  112
-#define F8  113
-#define Fs8 114
-#define G8  115
-#define Gs8 116
-#define A8  117
-#define As8 118
-#define B8  119
-#define C9  120
-#define Cs9 121
-#define D9  122
-#define Ds9 123
-#define E9  124
-#define F9  125
-#define Fs9 126
-#define G9  127
-
+#define NOTE_Cn1  0
+#define NOTE_Csn1 1
+#define NOTE_Dn1  2
+#define NOTE_Dsn1 3
+#define NOTE_En1  4
+#define NOTE_Fn1  5
+#define NOTE_Fsn1 6
+#define NOTE_Gn1  7
+#define NOTE_Gsn1 8
+#define NOTE_An1  9
+#define NOTE_Asn1 10
+#define NOTE_Bn1  11
+#define NOTE_C0   12
+#define NOTE_Cs0  13
+#define NOTE_D0   14
+#define NOTE_Ds0  15
+#define NOTE_E0   16
+#define NOTE_F0   17
+#define NOTE_Fs0  18
+#define NOTE_G0   19
+#define NOTE_Gs0  20
+#define NOTE_A0   21
+#define NOTE_As0  22
+#define NOTE_B0   23
+#define NOTE_C1   24
+#define NOTE_Cs1  25
+#define NOTE_D1   26
+#define NOTE_Ds1  27
+#define NOTE_E1   28
+#define NOTE_F1   29
+#define NOTE_Fs1  30
+#define NOTE_G1   31
+#define NOTE_Gs1  32
+#define NOTE_A1   33
+#define NOTE_As1  34
+#define NOTE_B1   35
+#define NOTE_C2   36
+#define NOTE_Cs2  37
+#define NOTE_D2   38
+#define NOTE_Ds2  39
+#define NOTE_E2   40
+#define NOTE_F2   41
+#define NOTE_Fs2  42
+#define NOTE_G2   43
+#define NOTE_Gs2  44
+#define NOTE_A2   45
+#define NOTE_As2  46
+#define NOTE_B2   47
+#define NOTE_C3   48
+#define NOTE_Cs3  49
+#define NOTE_D3   50
+#define NOTE_Ds3  51
+#define NOTE_E3   52
+#define NOTE_F3   53
+#define NOTE_Fs3  54
+#define NOTE_G3   55
+#define NOTE_Gs3  56
+#define NOTE_A3   57
+#define NOTE_As3  58
+#define NOTE_B3   59
+#define NOTE_C4   60  //Middle C
+#define NOTE_Cs4  61
+#define NOTE_D4   62
+#define NOTE_Ds4  63
+#define NOTE_E4   64
+#define NOTE_F4   65
+#define NOTE_Fs4  66
+#define NOTE_G4   67
+#define NOTE_Gs4  68
+#define NOTE_A4   69
+#define NOTE_As4  70
+#define NOTE_B4   71
+#define NOTE_C5   72
+#define NOTE_Cs5  73
+#define NOTE_D5   74
+#define NOTE_Ds5  75
+#define NOTE_E5   76
+#define NOTE_F5   77
+#define NOTE_Fs5  78
+#define NOTE_G5   79
+#define NOTE_Gs5  80
+#define NOTE_A5   81
+#define NOTE_As5  82
+#define NOTE_B5   83
+#define NOTE_C6   84
+#define NOTE_Cs6  85
+#define NOTE_D6   86
+#define NOTE_Ds6  87
+#define NOTE_E6   88
+#define NOTE_F6   89
+#define NOTE_Fs6  90
+#define NOTE_G6   91
+#define NOTE_Gs6  92
+#define NOTE_A6   93
+#define NOTE_As6  94
+#define NOTE_B6   95
+#define NOTE_C7   96
+#define NOTE_Cs7  97
+#define NOTE_D7   98
+#define NOTE_Ds7  99
+#define NOTE_E7  100
+#define NOTE_F7  101
+#define NOTE_Fs7 102
+#define NOTE_G7  103
+#define NOTE_Gs7 104
+#define NOTE_A7  105
+#define NOTE_As7 106
+#define NOTE_B7  107
+#define NOTE_C8  108
+#define NOTE_Cs8 109
+#define NOTE_D8  110
+#define NOTE_Ds8 111
+#define NOTE_E8  112
+#define NOTE_F8  113
+#define NOTE_Fs8 114
+#define NOTE_G8  115
+#define NOTE_Gs8 116
+#define NOTE_A8  117
+#define NOTE_As8 118
+#define NOTE_B8  119
+#define NOTE_C9  120
+#define NOTE_Cs9 121
+#define NOTE_D9  122
+#define NOTE_Ds9 123
+#define NOTE_E9  124
+#define NOTE_F9  125
+#define NOTE_Fs9 126
+#define NOTE_G9  127
 
 /****************************************************************************/
 void init_midi(void) {
@@ -179,7 +178,7 @@ void init_midi(void) {
   UCSR0C = 0b00000110;  //Asynchronous operation with 8-bit frames
   //Set USART Baud Rate Register (UBRR)
   //UBRR = fosc/(16*BAUD) - 1 = 8MHz/(16*31.25kBaud) - 1 = 15
-  UBRR0H = 0; 
+  UBRR0H = 0;
   UBRR0L = 15;  //MIDI is 31.25 kBaud
 }
 
@@ -187,27 +186,27 @@ void init_midi(void) {
 unsigned char status_byte(unsigned char opcode, unsigned char channel) {
   //Upper 4 bits: opcode to designate the type of message
   //Lower 4 bits: MIDI channel number
-  if (channel>=1 && channel<=16) return ((opcode<<4) | (channel-1));
+  if (channel >= 1 && channel <= 16) return ((opcode << 4) | (channel - 1));
   else return 0xBF;
 }
 
 /****************************************************************************/
 //Send a MIDI Control Change message containing one sensor value
-void send_midi(unsigned char controller_number, 
-    unsigned char controller_value) { 
-  //MIDI spec for "Control Change" messages sends three bytes: 
+void send_midi(unsigned char controller_number,
+               unsigned char controller_value) {
+  //MIDI spec for "Control Change" messages sends three bytes:
   // 1) status byte: opcode/channel number
   // 2) first data byte: controller number
   // 3) second data byte: controller value
   Serial.write(status_byte(CONTROL_CHANGE, 1));  //Channel 1
-  Serial.write(controller_number&0x7F);          //Controller number
-  Serial.write(controller_value&0x7F);           //7 bits (0-127)
+  Serial.write(controller_number & 0x7F);        //Controller number
+  Serial.write(controller_value & 0x7F);         //7 bits (0-127)
 }
 
 /****************************************************************************/
 void send_allnotesoff(void) {
   //"All Notes Off" Channel Mode Message
-  //Same as the Control Change, but implements Mode control and special 
+  //Same as the Control Change, but implements Mode control and special
   //message by using reserved controller numbers 120-127
   Serial.write(status_byte(CHANNEL_MODE, 1));    //Channel 1
   Serial.write(123);
@@ -221,30 +220,30 @@ void send_allnotesoff(void) {
 }
 
 /****************************************************************************/
-void send_noteon(unsigned char note, unsigned char velocity, 
-    unsigned char midi_chan) {
+void send_noteon(unsigned char note, unsigned char velocity,
+                 unsigned char midi_chan) {
   //MIDI spec for "Note On" event sent when a note is depressed (start)
-  //sends three bytes: 
+  //sends three bytes:
   // 1) status byte: opcode/channel number
   // 2) first data byte: the key (note) number
   // 3) second data byte: the velocity
   //midi_chan must be between 1 and 3
   Serial.write(status_byte(NOTE_ON, midi_chan)); //Channel midi_chan
-  Serial.write(note&0x7F);                       //7 bits (0-127)
-  Serial.write(velocity&0x7F);                   //7 bits (0-127)
+  Serial.write(note & 0x7F);                     //7 bits (0-127)
+  Serial.write(velocity & 0x7F);                 //7 bits (0-127)
 }
 
 /****************************************************************************/
-void send_noteoff(unsigned char note, unsigned char velocity, 
-    unsigned char midi_chan) {
+void send_noteoff(unsigned char note, unsigned char velocity,
+                  unsigned char midi_chan) {
   //MIDI spec for "Note Off" event sent when a note is released (ended)
-  //sends three bytes: 
+  //sends three bytes:
   // 1) status byte: opcode/channel number
   // 2) first data byte: the key (note) number
   // 3) second data byte: the velocity
   Serial.write(status_byte(NOTE_OFF, midi_chan)); //Channel midi_chan
-  Serial.write(note&0x7F);                       //7 bits (0-127)
-  Serial.write(velocity&0x7F);                   //7 bits (0-127)
+  Serial.write(note & 0x7F);                     //7 bits (0-127)
+  Serial.write(velocity & 0x7F);                 //7 bits (0-127)
 }
 
 /****************************************************************************/

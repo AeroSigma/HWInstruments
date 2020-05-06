@@ -37,6 +37,7 @@ int arpUDmaj[] = {0,4,7,4};
 int arpUmaj[] = {0, 4, 7, 12};
 int* arp;
 int arpPos = 0;
+int arpSel = 0;
 int rootNote = 69; //69 is A 440, A4
 //Note numbers
 //Octave   Note Numbers
@@ -60,7 +61,7 @@ unsigned long lastMillisDisplay = 0;
 bool blinkled = 0;
 
 unsigned long lastMillisArp = 0;
-bool arpsel = false;
+
 
 unsigned long lastMillisRead = 0;
 int anaIN7 = 0; //pot
@@ -188,14 +189,14 @@ pinMode(A6,INPUT); //ring
   display.display();
   note = rootNote;
   arp = arpUmin;
-  delay(4000);
+  delay(2000);
 } //end setup
 
 void loop() {
   currentMillis = millis();
 
 //read the analog inputs
-  switch(readIndex++){
+  switch(++readIndex){
     case 1:
       anaIN3 = analogRead(A3); // thumb
       //freq low pass
@@ -208,10 +209,14 @@ void loop() {
       anaIN5 = analogRead(A5); //middle
       //num note in Arpeggio
       break;
-    case  4:
-      anaIN6 = analogRead(A6); //ring
-      int arpSel = map(anaIN6,4,1020,0,3);
-      switch(arpSel){
+    case 4:
+        anaIN6 = analogRead(A6); //ring
+        rootNote = map(anaIN6,0,1023,57,69);
+      break;
+    case  5:
+      anaIN7 = analogRead(A7); //pot
+      arpSel = map(anaIN7,4,1020,0,3);
+      switch(arpSel){ //arpeggio selection
         case 0:
           arp = arpUDmin;
           break;
@@ -225,21 +230,14 @@ void loop() {
           arp = arpUmaj;
           break;
         default:
+          arp = arpUDmin;
           break;
-      }
+      } //end arpeggio selection
+      readIndex = 0;
       break;
-
-      case 5:
-        anaIN7 = analogRead(A7); //pot
-        anaIN7 = 512;
-        rootNote = map(anaIN7,465,785,57,69);
-        readIndex = 0;
+    default:
+      readIndex = 0;
       break;
-
-      default:
-        readIndex = 0;
-      break;
-    
     } //end read index switch case
 
   
@@ -265,6 +263,7 @@ void loop() {
     send_noteoff(note, 0x45, 1);
     note = rootNote + arp[arpPos];
     send_noteon(note, 0x45, 1);
+    arpPos++;
     display.clearDisplay();
     display.setCursor(5,5);
     display.print(F("3:"));
@@ -279,7 +278,6 @@ void loop() {
     display.print(F(" ,7:"));
     display.print(anaIN7);
     display.display();
-    arpPos++;
     lastMillisMidi = currentMillis;
   }
 
